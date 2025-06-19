@@ -1,0 +1,267 @@
+body
+{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+.navbar-logo
+{
+    background-color: cyan;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container .logo
+{
+    color: rgb(131, 38, 92);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-list-logo
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list-logo li a
+{
+    text-decoration: none;
+    color: chocolate;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.6s ease, color 0.4s;
+    border-radius: 4px;
+}
+
+.nav-list-logo li a:hover
+{
+    background-color: violet;
+    color: cadetblue;
+}
+
+.logo1
+{
+    width: 30%;
+    height: 30%;
+    border-radius: 3px;
+}
+
+.contenedor-principal {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos para la galería de superposición */
+.galeria-superposicion {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.efecto-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px;
+}
+
+.efecto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+/* Efectos de superposición */
+.superposicion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.superposicion-contenido {
+    text-align: center;
+    padding: 20px;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.efecto-item:hover .superposicion {
+    opacity: 1;
+}
+
+.efecto-item:hover .superposicion-contenido {
+    transform: translateY(0);
+}
+
+/* Efecto de ícono animado */
+.icono-animado {
+    font-size: 3rem;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    animation: none;
+}
+
+.efecto-item:hover .icono-animado {
+    transform: scale(1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Efecto de desplazamiento */
+.desplazamiento .superposicion-contenido {
+    transform: translateY(100%);
+}
+
+/* Efecto zoom */
+.zoom img {
+    transform: scale(1);
+}
+
+.efecto-item:hover .zoom img {
+    transform: scale(1.1);
+}
+
+/* Estilos para la galería animada */
+.galeria-animada {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.animada-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animada-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.animada-item p {
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Animaciones para la galería */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.slide-left {
+    animation: slideLeft 1s forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 1s forwards;
+}
+
+.rotate {
+    animation: rotate 1s forwards;
+}
+
+/* Keyframes para animaciones */
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(-5deg) scale(0.9); opacity: 0; }
+    to { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+/* Efectos al aparecer con scroll */
+.animada-item {
+    animation-delay: 0.3s;
+}
+
+.animada-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.animada-item:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.animada-item:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+/* Estilos para la sección de créditos */
+.seccion-creditos {
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+}
+
+.tarjeta-credito {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .galeria-superposicion, .galeria-animada {
+        grid-template-columns: 1fr;
+    }
+    
+    .animada-item {
+        animation-delay: 0.1s !important;
+    }
+}

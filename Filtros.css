@@ -1,0 +1,173 @@
+body
+{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+.navbar-logo
+{
+    background-color: cyan;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container .logo
+{
+    color: rgb(131, 38, 92);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-list-logo
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list-logo li a
+{
+    text-decoration: none;
+    color: chocolate;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.6s ease, color 0.4s;
+    border-radius: 4px;
+}
+
+.nav-list-logo li a:hover
+{
+    background-color: violet;
+    color: cadetblue;
+}
+
+.logo1
+{
+    width: 30%;
+    height: 30%;
+    border-radius: 3px;
+}
+
+
+.contenedor-principal {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-filtros {
+    margin-top: 30px;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.galeria-filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.card1 {
+    filter: sepia(80%);
+}
+
+.card1:hover {
+    filter: sepia(0%);
+}
+
+.card2 {
+    filter: grayscale(100%);
+}
+
+.card2:hover {
+    filter: grayscale(0%) brightness(110%);
+}
+
+.card3 {
+    filter: brightness(70%) contrast(130%);
+}
+
+.card3:hover {
+    filter: brightness(100%) contrast(100%);
+}
+
+.card4 {
+    filter: hue-rotate(90deg);
+}
+
+.card4:hover {
+    filter: hue-rotate(0deg) saturate(150%);
+}
+
+.card5 {
+    filter: blur(1px) opacity(90%);
+}
+
+.card5:hover {
+    filter: blur(0) opacity(100%);
+}
+
+.card6 {
+    filter: invert(20%);
+}
+
+.card6:hover {
+    filter: invert(0%) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.card7 {
+    filter: saturate(30%);
+}
+
+.card7:hover {
+    filter: saturate(120%);
+}
+
+.card8 {
+    filter: contrast(200%) brightness(90%);
+}
+
+.card8:hover {
+    filter: contrast(100%) brightness(100%);
+}
+
+.card9 {
+    filter: opacity(80%) drop-shadow(0 0 5px blue);
+}
+
+.card9:hover {
+    filter: opacity(100%) drop-shadow(0 0 0 transparent);
+}
